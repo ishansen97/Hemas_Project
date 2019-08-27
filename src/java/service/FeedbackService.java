@@ -6,21 +6,14 @@
 package service;
 
 import entity.Feedback;
-import entity.TestUser;
 import java.util.ArrayList;
 import java.util.List;
 import model.DeleteFeedbackRequest;
-import model.DeleteUserRequest;
 import model.GetFeedbackRequest;
 import model.GetFeedbackResponse;
-import model.GetUserRequest;
-import model.GetUserResponse;
 import model.InsertFeedbackRequest;
-import model.InsertUserRequest;
 import model.UpdateFeedbackRequest;
-import model.UpdateUserRequest;
 import repository.FeedbackRepository;
-import repository.UserRepository;
 
 /**
  *
@@ -40,7 +33,7 @@ public class FeedbackService {
         return feedbackRepo.insertFeedback(feedback);
     }
     
-    public static GetFeedbackResponse getUser(GetFeedbackRequest request) {
+    public static GetFeedbackResponse getFeedback(GetFeedbackRequest request) {
         GetFeedbackResponse response = new GetFeedbackResponse();
         int id = request.getFeedback_Id();
         
@@ -54,7 +47,7 @@ public class FeedbackService {
         return response;
     }
     
-    public static boolean updateUser(UpdateFeedbackRequest request) {
+    public static boolean updateFeedback(UpdateFeedbackRequest request) {
         Feedback feedback = new Feedback();
         
         feedback.setFeedback_Id(request.getFeedback_Id());

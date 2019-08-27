@@ -12,10 +12,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.InsertFeedbackRequest;
-import model.InsertUserRequest;
 import service.FeedbackService;
-import service.UserService;
 
 /**
  *
@@ -48,9 +47,15 @@ public class InsertFeedbackServlet extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
             
+            HttpSession session = request.getSession();
+            
             String telephone_no = request.getParameter("telephone_no");
             String fb_type = request.getParameter("fb_type");
             String fb_desc = (request.getParameter("fb_desc"));
+            
+            out.println("tel_no: " + telephone_no);
+            out.println("fb_type: " + fb_type);
+            out.println("fb_desc: " + fb_desc);
             
             //create a request based on the inputs
             InsertFeedbackRequest newFeedbackRequest = new InsertFeedbackRequest();
@@ -66,7 +71,8 @@ public class InsertFeedbackServlet extends HttpServlet {
             boolean isFeedbackInserted = FeedbackService.insertFeedback(newFeedbackRequest);
             
             if (isFeedbackInserted) {
-                //something
+                session.setAttribute("IsSuccess", true);
+               response.sendRedirect(request.getContextPath() + "/Feedback/Feedback.jsp");
             }
             else {
                 //error message
