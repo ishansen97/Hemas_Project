@@ -8,19 +8,17 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import service.UserService;
 import model.InsertUserRequest;
+import service.UserService;
 
 /**
  *
- * @author Ishan
+ * @author Sandeepa Fernando
  */
-@WebServlet(name = "TestServlet", urlPatterns = {"/TestServlet"})
-public class TestServlet extends HttpServlet {
+public class RegistrationSevlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,37 +37,41 @@ public class TestServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TestServlet</title>");            
+            out.println("<title>Servlet RegistrationSevlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet RegistrationSevlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-            
-//            This is a sample for inserting a user
+
+            //            This is a sample for inserting a user
             String fname = request.getParameter("fname");
-            String lname = request.getParameter("lname");
-            int age = Integer.parseInt(request.getParameter("age"));
-            
+            String nic = request.getParameter("nic");
+            int staffid = Integer.parseInt(request.getParameter("staffid"));
+            String email = request.getParameter("email");
+            String vno = request.getParameter("vehicleno");
+            int tele = Integer.parseInt(request.getParameter("telephone"));
+
             //create a request based on the inputs
             InsertUserRequest newUserRequest = new InsertUserRequest();
-            
+
             //set values to the request
             newUserRequest.setFname(fname);
-            newUserRequest.setLname(lname);
-            newUserRequest.setAge(age);
-            
+            newUserRequest.setNic(nic);
+            newUserRequest.setStaffid(staffid);
+            newUserRequest.setEmail(email);
+            newUserRequest.setVehicalno(vno);
+            newUserRequest.setTelephone(tele);
+
             //call the logic class
             boolean isUserInserted = UserService.insertUser(newUserRequest);
-            
+
             if (isUserInserted) {
-                //something
-            }
-            else {
+                response.sendRedirect("RegistrationPage.jsp");
+            } else {
                 //error message
+                out.println("error");
             }
-            
-            
         }
     }
 

@@ -10,15 +10,15 @@ package model;
  * @author Ishan
  */
 public class DeleteUserRequest {
-    private int id;
 
-    public int getId() {
-        return id;
+    private int telephone;
+
+    public int getTelephone() {
+        return telephone;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setTelephone(int telephone) {
+        this.telephone = telephone;
     }
-    
-    
+
 }

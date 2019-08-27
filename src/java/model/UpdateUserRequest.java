@@ -7,21 +7,16 @@ package model;
 
 /**
  *
- * @author Ishan
+ * @author Sandeepa Fernando
  */
 public class UpdateUserRequest {
-    private int id;
+
     private String fname;
-    private String lname;
-    private int age;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private String nic;
+    private int staffid;
+    private String email;
+    private String vehicalno;
+    private int telephone;
 
     public String getFname() {
         return fname;
@@ -31,21 +26,44 @@ public class UpdateUserRequest {
         this.fname = fname;
     }
 
-    public String getLname() {
-        return lname;
+    public String getNic() {
+        return nic;
     }
 
-    public void setLname(String lname) {
-        this.lname = lname;
+    public void setNic(String nic) {
+        this.nic = nic;
     }
 
-    public int getAge() {
-        return age;
+    public int getStaffid() {
+        return staffid;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setStaffid(int staffid) {
+        this.staffid = staffid;
     }
-    
-    
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getVehicalno() {
+        return vehicalno;
+    }
+
+    public void setVehicalno(String vehicalno) {
+        this.vehicalno = vehicalno;
+    }
+
+    public int getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(int telephone) {
+        this.telephone = telephone;
+    }
+
 }

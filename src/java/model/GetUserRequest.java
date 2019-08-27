@@ -11,14 +11,14 @@ package model;
  */
 public class GetUserRequest {
 
-    private int Id;
+    private int telephone;
 
-    public int getId() {
-        return Id;
+    public int getTelephone() {
+        return telephone;
     }
 
-    public void setId(int Id) {
-        this.Id = Id;
+    public void setTelephone(int telephone) {
+        this.telephone = telephone;
     }
-    
+
 }

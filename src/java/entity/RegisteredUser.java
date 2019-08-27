@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package entity;
 
 /**
  *
  * @author Sandeepa Fernando
  */
-public class InsertUserRequest {
-
+public class RegisteredUser {
     private String fname;
     private String nic;
     private int staffid;
@@ -18,16 +17,19 @@ public class InsertUserRequest {
     private String vehicalno;
     private int telephone;
 
+    public RegisteredUser(String fname, int staffid, String email, String vehicalno, int telephone) {
+        this.fname = fname;
+        this.staffid = staffid;
+        this.email = email;
+        this.vehicalno = vehicalno;
+        this.telephone = telephone;
+    }
+    
+    public RegisteredUser(){
+    }
+
     public String getFname() {
         return fname;
-    }
-
-    public String getVehicalno() {
-        return vehicalno;
-    }
-
-    public void setVehicalno(String vehicalno) {
-        this.vehicalno = vehicalno;
     }
 
     public void setFname(String fname) {
@@ -58,14 +60,21 @@ public class InsertUserRequest {
         this.email = email;
     }
 
+    public String getVehicalno() {
+        return vehicalno;
+    }
+
+    public void setVehicalno(String vehicalno) {
+        this.vehicalno = vehicalno;
+    }
+
     public int getTelephone() {
         return telephone;
     }
 
     public void setTelephone(int telephone) {
         this.telephone = telephone;
-        
     }
-
+    
 
 }
