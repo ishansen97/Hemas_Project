@@ -13,5 +13,9 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <form action="<%=request.getContextPath() %>/InsertFeedbackServlet">
+            <input type="text" name="test">
+            <button type="submit">submit</button>
+        </form>
     </body>
 </html>
