@@ -14,14 +14,14 @@ import java.sql.Connection;
 public class TestDBConnection {
     
     public static void main(String[] args) {
-        DBConnection dbcon = DBConnection.getInstance();
-        Connection con = dbcon.getCon();
+        String test = "R00000123";
+        String idParts1[] = test.split("R");
+        int index = idParts1[1].lastIndexOf("0");
+        String value = idParts1[1].substring(index + 1);
         
-        if (con != null) {
-            System.out.println("connected");
-        }
-        else {
-            System.out.println("not connected");
-        }
+        int number = Integer.parseInt(value);
+        
+        System.out.println(idParts1[1]);
+        System.out.println(number);
     }
 }

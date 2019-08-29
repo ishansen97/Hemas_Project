@@ -39,6 +39,21 @@
                         }
                     });
                 });
+                
+                $(function() {
+                    var dtToday = new Date();
+    
+                    var month = dtToday.getMonth() + 1;
+                    var day = dtToday.getDate();
+                    var year = dtToday.getFullYear();
+                    if(month < 10)
+                        month = '0' + month.toString();
+                    if(day < 10)
+                        day = '0' + day.toString();
+
+                    var maxDate = year + '-' + month + '-' + day;
+                    $('#arrival_date').attr('min', maxDate);
+                });
             });
         </script>
         <div class="container">
@@ -53,17 +68,22 @@
                             <form action="<%=request.getContextPath() %>/InsertParkingReservationServlet" method="POST" class="was-invalidated">
                                 <div class="form-group">
                                     <label>Telephone No.</label>
-                                    <input type="text" class="form-control col-5" name="telephone_no" id="telephone_no">
+                                    <input type="number" class="form-control col-5" name="telephone_no" id="telephone_no" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Arrival Date</label>
+                                    <input type="date" class="form-control col-5" name="arrival_date" id="arrival_date" min="" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Arrival Time</label>
-                                    <input type="time" class="form-control col-5" name="arrival_time" id="arrival_time">
+                                    <input type="time" class="form-control col-5" name="arrival_time" id="arrival_time" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Park Name</label>
-                                    <select class="form-control col-4" name="p_name" id="p_name">
+                                    <select class="form-control col-4" name="p_name" id="p_name" required>
                                         <option value="">---------------</option>
                                         <% for (GetParkingResponse park: parkingResponse) { %>
                                         <option value="<%=park.getP_name() %>"><%=park.getP_name() %></option>
