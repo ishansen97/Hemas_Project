@@ -3,12 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/Other%20Projects/Kirul_Sandeepa_Ishan%20Project/project/HemasProject/src/java/service/ParkingService.java</file>
             <file>file:/D:/Other%20Projects/Kirul_Sandeepa_Ishan%20Project/project/HemasProject/web/SlotAllocation/SlotAllocation.jsp</file>
             <file>file:/D:/Other%20Projects/Kirul_Sandeepa_Ishan%20Project/project/HemasProject/src/java/model/GetParkingSlotRequest.java</file>
             <file>file:/D:/Other%20Projects/Kirul_Sandeepa_Ishan%20Project/project/HemasProject/src/java/repository/ParkingSlotRepository.java</file>
             <file>file:/D:/Other%20Projects/Kirul_Sandeepa_Ishan%20Project/project/HemasProject/src/java/service/ParkingSlotService.java</file>
             <file>file:/D:/Other%20Projects/Kirul_Sandeepa_Ishan%20Project/project/HemasProject/web/Booking/Booking.jsp</file>
+=======
+            <file>file:/C:/Users/Sandeepa%20Fernando/Documents/NetBeansProjects/Hemas/Hemas_Project/src/java/repository/UserRepository.java</file>
+            <file>file:/C:/Users/Sandeepa%20Fernando/Documents/NetBeansProjects/Hemas/Hemas_Project/src/java/service/UserService.java</file>
+            <file>file:/C:/Users/Sandeepa%20Fernando/Documents/NetBeansProjects/Hemas/Hemas_Project/web/View_all_users.jsp</file>
+>>>>>>> Sandeepa
         </group>
     </open-files>
 </project-private>

@@ -9,6 +9,7 @@ package model;
  *
  * @author Ishan
  */
+<<<<<<< HEAD:src/java/model/GetParkingRequest.java
 public class GetParkingRequest {
     private String p_name;
 
@@ -18,7 +19,18 @@ public class GetParkingRequest {
 
     public void setP_name(String p_name) {
         this.p_name = p_name;
+=======
+public class DeleteUserRequest {
+
+    private int telephone;
+
+    public int getTelephone() {
+        return telephone;
     }
-    
-    
+
+    public void setTelephone(int telephone) {
+        this.telephone = telephone;
+>>>>>>> Sandeepa:src/java/model/DeleteUserRequest.java
+    }
+
 }
