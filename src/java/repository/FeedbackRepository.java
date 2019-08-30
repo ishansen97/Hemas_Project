@@ -7,7 +7,6 @@ package repository;
 
 import connection.DBConnection;
 import entity.Feedback;
-import entity.TestUser;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

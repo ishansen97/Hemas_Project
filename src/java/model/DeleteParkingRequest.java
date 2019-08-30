@@ -12,7 +12,7 @@ package model;
 public class DeleteParkingRequest {
     private String p_name;
 
-<<<<<<< HEAD:src/java/model/DeleteParkingRequest.java
+
     public String getP_name() {
         return p_name;
     }
@@ -22,7 +22,6 @@ public class DeleteParkingRequest {
     }
     
     
-=======
     private int telephone;
 
     public int getTelephone() {
@@ -33,5 +32,4 @@ public class DeleteParkingRequest {
         this.telephone = telephone;
     }
 
->>>>>>> Sandeepa:src/java/model/GetUserRequest.java
 }
