@@ -67,7 +67,7 @@ public class RegistrationSevlet extends HttpServlet {
             boolean isUserInserted = UserService.insertUser(newUserRequest);
 
             if (isUserInserted) {
-                response.sendRedirect("RegistrationPage.jsp");
+                response.sendRedirect(request.getContextPath() + "/UserRegistration/RegistrationPage.jsp");
             } else {
                 //error message
                 out.println("error");

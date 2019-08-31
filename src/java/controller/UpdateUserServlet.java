@@ -68,7 +68,7 @@ public class UpdateUserServlet extends HttpServlet {
             boolean isUserInserted = UserService.updateUser(newUserRequest);
 
             if (isUserInserted) {
-                response.sendRedirect("View_all_users.jsp");
+                response.sendRedirect(request.getContextPath() + "/UserRegistration/View_all_users.jsp");
             } else {
                 //error message
                 out.println("error");
